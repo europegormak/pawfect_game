@@ -1,7 +1,6 @@
-import { ChoiceOption } from './ChoiceOption';
+import { ChoiceOption } from "./ChoiceOption";
 
-export interface DialogueBoxProps {
-    speaker: string;
+export interface StoryBoxProps {
     text: string;
     onNext: () => void;
     hasChoices: boolean;

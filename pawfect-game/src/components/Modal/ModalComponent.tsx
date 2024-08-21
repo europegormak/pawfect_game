@@ -1,7 +1,7 @@
 import { ModalProps } from '../../models/ModalProps';
-import './Modal.css';
+import './ModalComponent.css';
 
-function Modal(props: ModalProps) {
+function ModalComponent(props: ModalProps) {
     if (!props.isOpen) {
         return null;
     }
@@ -16,4 +16,4 @@ function Modal(props: ModalProps) {
     );
 }
 
-export default Modal;
+export default ModalComponent;

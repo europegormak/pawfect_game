@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Scene from './components/Scene/Scene';
 import DialogueBox from './components/DialogueBox/DialogueBox';
-import Choice from './components/Choice/Choice';
 import Modal from './components/Modal/Modal';
 import { SceneProps } from './models/SceneProps';
 
@@ -20,6 +19,7 @@ function App() {
   const [modalMessage, setModalMessage] = useState<string>('');
   const [gameOver, setGameOver] = useState<boolean>(false);
 
+  // TODO Replace hardcoded conditions wiht dynamic conditions
   // Map the JSON data to SceneProps[]
   const scenes: SceneProps[] = scenesData.scenes.map(scene => ({
     ...scene,
@@ -42,12 +42,7 @@ function App() {
 
   function handleChoice(value: string, correct: boolean) {
     if (correct) {
-      setModalMessage('You made the right choice! Moving on...');
-      setModalOpen(true);
-      setTimeout(() => {
-        setModalOpen(false);
-        handleNext();
-      }, 2000);
+      handleNext();
     } else {
       setModalMessage('Incorrect choice! The game is over.');
       setModalOpen(true);

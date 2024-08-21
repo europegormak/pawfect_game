@@ -2,8 +2,60 @@
     position: absolute;
     bottom: 10%;
     width: 80%;
-    margin: 0 auto;
+    left: 50%;
+    transform: translateX(-50%);
     background: rgba(0, 0, 0, 0.8);
     color: white;
     padding: 20px;
+    border-radius: 10px;
+}
+
+.dialogue-box .question {
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center; /* Center the question text */
+}
+
+.choices {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+    text-align: center; /* Center the list */
+}
+
+.choices li {
+    margin-bottom: 10px;
+}
+
+.choices button {
+    width: auto;
+    padding: 10px 20px;
+    border: 2px solid #4a4a4a;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: inline-block; /* Ensure buttons are centered */
+}
+
+.choices button:hover {
+    background-color: #4a4a4a;
+    color: #fff;
+}
+
+.next-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #4a4a4a;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; /* Center the Next button */
+}
+
+.next-button:hover {
+    background-color: #333;
 }

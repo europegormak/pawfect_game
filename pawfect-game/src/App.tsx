@@ -47,7 +47,7 @@ function App() {
       setTimeout(() => {
         setModalOpen(false);
         handleNext();
-      }, 2000); // Wait 2 seconds before moving to the next scene
+      }, 2000);
     } else {
       setModalMessage('Incorrect choice! The game is over.');
       setModalOpen(true);
@@ -72,21 +72,15 @@ function App() {
     <div>
       <Scene {...currentScene}>
         {!gameOver && (
-          <>
-            <DialogueBox
-              speaker={currentDialogueData.speaker}
-              text={currentDialogueData.text}
-              onNext={handleNext}
-              hasChoices={hasChoices}
-            />
-            {hasChoices && (
-              <Choice
-                options={currentDialogueData.choices || []}
-                onSelect={(value, correct) => handleChoice(value, correct)}
-                question={currentDialogueData.question}
-              />
-            )}
-          </>
+          <DialogueBox
+            speaker={currentDialogueData.speaker}
+            text={currentDialogueData.text}
+            onNext={handleNext}
+            hasChoices={hasChoices}
+            choices={currentDialogueData.choices}
+            question={currentDialogueData.question}
+            onSelect={handleChoice}
+          />
         )}
       </Scene>
       <Modal isOpen={modalOpen} message={modalMessage} onClose={closeModal} />

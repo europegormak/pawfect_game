@@ -5,6 +5,8 @@ import Choice from './components/Choice/Choice';
 import Modal from './components/Modal/Modal';
 import { SceneProps } from './models/SceneProps';
 
+import scenesData from './assets/dialogs.json';
+
 // Importing images
 import ForestEdge from './assets/images/forest-edge.jpg';
 import MysteriousClearing from './assets/images/mysterious-clearing.jpg';
@@ -18,64 +20,15 @@ function App() {
   const [modalMessage, setModalMessage] = useState<string>('');
   const [gameOver, setGameOver] = useState<boolean>(false);
 
-  const scenes: SceneProps[] = [
-    {
-      background: ForestEdge,
-      characters: [
-        { name: 'Donkey', sprite: DonkeyImage, position: { left: '10%' } },
-        { name: 'Shrek', sprite: ShrekImage, position: { right: '10%' } },
-      ],
-      dialogue: [
-        {
-          speaker: 'Donkey',
-          text: 'Shrek, look at this! The forest is even more beautiful than I imagined!',
-        },
-        {
-          speaker: 'Shrek',
-          text: 'It sure is... but don’t you think we should be careful? We don’t know what’s in there.',
-        },
-        {
-          speaker: 'Donkey',
-          text: 'Come on, where’s your sense of adventure? We’ll be fine! Let’s explore a little.',
-        },
-        {
-          speaker: 'Shrek',
-          text: 'Alright, but let’s not stray too far from the path, okay?',
-          question: 'Should they stray from the path?',
-          choices: [
-            { text: 'Stay on the path', value: 'stay_on_path', correct: true },
-            { text: 'Explore further', value: 'explore_further', correct: false },
-          ],
-        },
-        {
-          speaker: 'Donkey',
-          text: 'Deal! Let’s go.',
-        },
-      ],
-    },
-    {
-      background: MysteriousClearing,
-      characters: [
-        { name: 'Donkey', sprite: DonkeyImage, position: { left: '10%' } },
-        { name: 'Shrek', sprite: ShrekImage, position: { right: '10%' } },
-      ],
-      dialogue: [
-        {
-          speaker: 'Donkey',
-          text: 'Wow... Shrek, do you see that? What do you think this stone is?',
-        },
-        {
-          speaker: 'Shrek',
-          text: 'I have no idea, but it looks ancient. We should be careful.',
-          question: 'What should they do?',
-          choices: [
-            { text: 'Examine the stone', value: 'examine_stone', correct: false },
-            { text: 'Leave the clearing', value: 'leave_clearing', correct: true },
-          ],
-        },
-      ],
-    },
-  ];
+  // Map the JSON data to SceneProps[]
+  const scenes: SceneProps[] = scenesData.scenes.map(scene => ({
+    ...scene,
+    background: scene.background === 'forest-edge.jpg' ? ForestEdge : MysteriousClearing,
+    characters: scene.characters.map(character => ({
+      ...character,
+      sprite: character.sprite === 'donkey.png' ? DonkeyImage : ShrekImage,
+    })),
+  }));
 
   function handleNext() {
     const nextDialogue = currentDialogue + 1;

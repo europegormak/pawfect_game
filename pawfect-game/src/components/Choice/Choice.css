@@ -1,0 +1,44 @@
+/* .choices {
+    display: flex;
+    justify-content: center;
+}
+  
+.choices button {
+    margin: 5px;
+    padding: 10px 20px;
+    background-color: #555;
+    color: white;
+    border: none;
+    cursor: pointer;
+} */
+.choice-container {
+    margin-top: 20px;
+    text-align: center;
+}
+  
+.choice-question {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+}
+  
+.choice-options {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+  
+.choice-button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+  
+.choice-button:hover {
+    background-color: #0056b3;
+}

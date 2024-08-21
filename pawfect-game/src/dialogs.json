@@ -8,19 +8,21 @@
           { "name": "Shrek", "sprite": "/assets/images/shrek.png", "position": { "right": "10%" } }
         ],
         "dialogue": [
-          { "speaker": "Donkey", "text": "Shrek, look at this! The forest is even more beautiful than I imagined!" },
-          { "speaker": "Shrek", "text": "It sure is... but don’t you think we should be careful? We don’t know what’s in there." },
-          { "speaker": "Donkey", "text": "Come on, where’s your sense of adventure? We’ll be fine! Let’s explore a little." },
+          { "speaker": "Donkey", "text": "Shrek, look at this! The forest is even more beautiful than I imagined!", "type": "dialogue" },
+          { "speaker": "Shrek", "text": "It sure is... but don’t you think we should be careful? We don’t know what’s in there.", "type": "dialogue" },
+          { "text": "As they ventured deeper, the forest grew darker and the air became still...", "type": "story" },
+          { "speaker": "Donkey", "text": "Come on, where’s your sense of adventure? We’ll be fine! Let’s explore a little.", "type": "dialogue" },
           {
             "speaker": "Shrek",
             "text": "Alright, but let’s not stray too far from the path, okay?",
+            "type": "dialogue",
             "question": "Should they stray from the path?",
             "choices": [
               { "text": "Stay on the path", "value": "stay_on_path", "correct": true },
               { "text": "Explore further", "value": "explore_further", "correct": false }
             ]
           },
-          { "speaker": "Donkey", "text": "Deal! Let’s go." }
+          { "speaker": "Donkey", "text": "Deal! Let’s go.", "type": "dialogue" }
         ]
       },
       {
@@ -31,10 +33,11 @@
           { "name": "Shrek", "sprite": "/assets/images/shrek.png", "position": { "right": "10%" } }
         ],
         "dialogue": [
-          { "speaker": "Donkey", "text": "Wow... Shrek, do you see that? What do you think this stone is?" },
+          { "speaker": "Donkey", "text": "Wow... Shrek, do you see that? What do you think this stone is?", "type": "dialogue" },
           {
             "speaker": "Shrek",
             "text": "I have no idea, but it looks ancient. We should be careful.",
+            "type": "dialogue",
             "question": "What should they do?",
             "choices": [
               { "text": "Examine the stone", "value": "examine_stone", "correct": false },

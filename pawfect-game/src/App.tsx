@@ -2,9 +2,12 @@ import { useState } from 'react';
 import SceneComponent from './components/Scene/SceneComponent';
 import DialogueBoxComponent from './components/DialogueBox/DialogueBoxComponent';
 import ModalComponent from './components/Modal/ModalComponent';
+import StoryBoxComponent from './components/Story/StoryBoxComponent';
 import { SceneProps } from './models/SceneProps';
 
 import scenesData from './dialogs.json';
+import { DialogueType } from './models/DialogueType';
+import { Dialogue } from './models/Dialogue';
 
 function App() {
     const [scene, setScene] = useState<number>(0);
@@ -13,8 +16,18 @@ function App() {
     const [modalMessage, setModalMessage] = useState<string>('');
     const [gameOver, setGameOver] = useState<boolean>(false);
     
+    function convertDialogueType(dialogue: Dialogue): Dialogue {
+        return {
+            ...dialogue,
+            type: dialogue.type === 'dialogue' ? DialogueType.DIALOGUE : DialogueType.STORY,
+        };
+    }
+
     // Map the JSON data to SceneProps[]
-    const scenes: SceneProps[] = scenesData.scenes;
+    const scenes: SceneProps[] = scenesData.scenes.map((scene: any) => ({
+        ...scene,
+        dialogue: scene.dialogue.map(convertDialogueType), // Convert dialogue types here
+    }));
 
     function handleNext() {
         const nextDialogue = currentDialogue + 1;
@@ -61,7 +74,7 @@ function App() {
     return (
         <div>
             <SceneComponent {...currentScene}>
-                {!gameOver && (
+                {!gameOver && currentDialogueData.type === DialogueType.DIALOGUE && (
                     <DialogueBoxComponent
                         speaker={currentDialogueData.speaker}
                         text={currentDialogueData.text}
@@ -71,6 +84,9 @@ function App() {
                         question={currentDialogueData.question}
                         onSelect={handleChoice}
                     />
+                )}
+                {!gameOver && currentDialogueData.type === DialogueType.STORY && (
+                    <StoryBoxComponent text={currentDialogueData.text} onNext={handleNext}/>
                 )}
             </SceneComponent>
             <ModalComponent isOpen={modalOpen} message={modalMessage} onClose={closeModal} />

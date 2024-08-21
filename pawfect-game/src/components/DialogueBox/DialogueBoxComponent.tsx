@@ -1,7 +1,7 @@
 import { DialogueBoxProps } from '../../models/DialogueBoxProps';
-import './DialogueBox.css';
+import './DialogueBoxComponent.css';
 
-function DialogueBox(props: DialogueBoxProps) {
+function DialogueBoxComponent(props: DialogueBoxProps) {
     return (
         <div className="dialogue-box">
             <p><strong>{props.speaker}:</strong> {props.text}</p>
@@ -11,7 +11,7 @@ function DialogueBox(props: DialogueBoxProps) {
                     <ul className="choices">
                         {props.choices?.map((choice) => (
                             <li key={choice.value}>
-                                <button onClick={() => props.onSelect(choice.value, choice.correct)}>
+                                <button onClick={() => props.onSelect(choice.correct)}>
                                     {choice.text}
                                 </button>
                             </li>
@@ -26,4 +26,4 @@ function DialogueBox(props: DialogueBoxProps) {
     );
 }
 
-export default DialogueBox;
+export default DialogueBoxComponent;

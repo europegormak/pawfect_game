@@ -1,10 +1,10 @@
 import { CharacterProps } from '../../models/CharacterProps';
-import './Character.css';
+import './CharacterComponent.css';
 
-function Character(props: CharacterProps) {
+function CharacterComponent(props: CharacterProps) {
     return (
         <img className="character" src={props.sprite} alt={props.name} style={{ position: 'absolute', ...props.position }} />
     );
 }
 
-export default Character;
+export default CharacterComponent;

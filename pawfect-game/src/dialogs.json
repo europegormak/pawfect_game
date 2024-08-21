@@ -2,10 +2,10 @@
     "scenes": [
       {
         "id": 1,
-        "background": "forest-edge.jpg",
+        "background": "/assets/images/forest-edge.jpg",
         "characters": [
-          { "name": "Donkey", "sprite": "donkey.png", "position": { "left": "10%" } },
-          { "name": "Shrek", "sprite": "shrek.png", "position": { "right": "10%" } }
+          { "name": "Donkey", "sprite": "/assets/images/donkey.png", "position": { "left": "10%" } },
+          { "name": "Shrek", "sprite": "/assets/images/shrek.png", "position": { "right": "10%" } }
         ],
         "dialogue": [
           { "speaker": "Donkey", "text": "Shrek, look at this! The forest is even more beautiful than I imagined!" },
@@ -25,10 +25,10 @@
       },
       {
         "id": 2,
-        "background": "mysterious-clearing.jpg",
+        "background": "/assets/images/mysterious-clearing.jpg",
         "characters": [
-          { "name": "Donkey", "sprite": "donkey.png", "position": { "left": "10%" } },
-          { "name": "Shrek", "sprite": "shrek.png", "position": { "right": "10%" } }
+          { "name": "Donkey", "sprite": "/assets/images/donkey.png", "position": { "left": "10%" } },
+          { "name": "Shrek", "sprite": "/assets/images/shrek.png", "position": { "right": "10%" } }
         ],
         "dialogue": [
           { "speaker": "Donkey", "text": "Wow... Shrek, do you see that? What do you think this stone is?" },

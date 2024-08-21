@@ -7,5 +7,5 @@ export interface DialogueBoxProps {
     hasChoices: boolean;
     choices?: ChoiceOption[];
     question?: string;
-    onSelect: (value: string, correct: boolean) => void;
+    onSelect: (correct: boolean) => void;
 }

@@ -86,7 +86,14 @@ function App() {
                     />
                 )}
                 {!gameOver && currentDialogueData.type === DialogueType.STORY && (
-                    <StoryBoxComponent text={currentDialogueData.text} onNext={handleNext}/>
+                    <StoryBoxComponent
+                        text={currentDialogueData.text}
+                        onNext={handleNext}
+                        hasChoices={hasChoices}
+                        choices={currentDialogueData.choices}
+                        question={currentDialogueData.question}
+                        onSelect={handleChoice}
+                    />
                 )}
             </SceneComponent>
             <ModalComponent isOpen={modalOpen} message={modalMessage} onClose={closeModal} />

@@ -1,47 +1,55 @@
 {
     "scenes": [
       {
-        "id": 1,
-        "background": "/assets/images/forest-edge.jpg",
+        "background": "/assets/images/mysterious-clearing.jpg",
         "characters": [
-          { "name": "Donkey", "sprite": "/assets/images/donkey.png", "position": { "left": "10%" } },
-          { "name": "Shrek", "sprite": "/assets/images/shrek.png", "position": { "right": "10%" } }
+          { "name": "Cooper", "sprite": "/assets/images/donkey.png", "position": { "left": "10%" } },
+          { "name": "Anna", "sprite": "/assets/images/shrek.png", "position": { "right": "10%" } }
         ],
         "dialogue": [
-          { "speaker": "Donkey", "text": "Shrek, look at this! The forest is even more beautiful than I imagined!", "type": "dialogue" },
-          { "speaker": "Shrek", "text": "It sure is... but don’t you think we should be careful? We don’t know what’s in there.", "type": "dialogue" },
-          { "text": "As they ventured deeper, the forest grew darker and the air became still...", "type": "story" },
-          { "speaker": "Donkey", "text": "Come on, where’s your sense of adventure? We’ll be fine! Let’s explore a little.", "type": "dialogue" },
+          { "text": "Last night it was the full moon.", "type": "story" },
+          { "speaker": "Anna", "text": "Cooper, how do you feel?", "type": "dialogue" },
+          { "speaker": "Cooper", "text": "Ohhh, if I could tell you how bad I feel...", "type": "dialogue" },
+          { "text": "Anna tries to cheer him up with his favorite squeaky toy.", "type": "story" },
+          { "speaker": "Anna", "text": "Look, it’s your piggy! Let’s play!", "type": "dialogue" },
+          { "speaker": "Cooper", "text": "I’m too tired... You can play with it yourself!", "type": "dialogue" },
           {
-            "speaker": "Shrek",
-            "text": "Alright, but let’s not stray too far from the path, okay?",
-            "type": "dialogue",
-            "question": "Should they stray from the path?",
+            "speaker": "Anna",
+            "type": "story",
+            "question": "Anna becomes anxious. What should Anna do?",
             "choices": [
-              { "text": "Stay on the path", "value": "stay_on_path", "correct": true },
-              { "text": "Explore further", "value": "explore_further", "correct": false }
+              { "text": "Ask for advice in the Dog Friends Facebook Forum.", "value": "close_the_door", "correct": false },
+              { "text": "Find a vet and book an appointment.", "value": "apologize_wrong", "correct": true },
+              { "text": "Make him some chicken soup.", "value": "apologize_correct", "correct": false }
             ]
-          },
-          { "speaker": "Donkey", "text": "Deal! Let’s go.", "type": "dialogue" }
+          }
         ]
       },
       {
-        "id": 2,
-        "background": "/assets/images/mysterious-clearing.jpg",
+        "id": 3,
+        "background": "/assets/images/forest-edge.jpg",
         "characters": [
-          { "name": "Donkey", "sprite": "/assets/images/donkey.png", "position": { "left": "10%" } },
-          { "name": "Shrek", "sprite": "/assets/images/shrek.png", "position": { "right": "10%" } }
+          { "name": "Cooper", "sprite": "/assets/images/donkey.png", "position": { "left": "10%" } },
+          { "name": "Anna", "sprite": "/assets/images/shrek.png", "position": { "right": "10%" } }
         ],
         "dialogue": [
-          { "speaker": "Donkey", "text": "Wow... Shrek, do you see that? What do you think this stone is?", "type": "dialogue" },
+          { "text": "Last night it was the full moon. The neighbours' dog has been barking all night. It has been a tough night, you know.", "type": "story" },
+          { "text": "In the early morning delivery man knocks the door. Cooper became angry because he was abruptly awakened from a deep sleep.", "type": "story" },
+          { "speaker": "Cooper", "text": "Who is that mean person who won't let you sleep at such an early hour?", "type": "dialogue" },
+          { "text": "Anna opens the door and says \"Good morning\" to delivery man.", "type": "story" },
+          { "speaker": "Cooper", "text": "Good morning? Reallllllly?", "type": "dialogue" },
+          { "text": "Next second Cooper is out of the door and bits delivery man into leg. Pants are damaged. Leg is in blood.", "type": "story" },
+          { "speaker": "Anna", "text": "Cooper, where are your manners?", "type": "dialogue" },
+          { "speaker": "Cooper", "text": "Pfff... I am going to sleep!!!", "type": "dialogue" },
+          { "text": "Next second Cooper is out of the door and bits delivery man into leg. Pants are damaged. Leg is in blood.", "type": "story" },
           {
-            "speaker": "Shrek",
-            "text": "I have no idea, but it looks ancient. We should be careful.",
-            "type": "dialogue",
-            "question": "What should they do?",
+            "speaker": "Anna",
+            "type": "story",
+            "question": "What should Anna do?",
             "choices": [
-              { "text": "Examine the stone", "value": "examine_stone", "correct": false },
-              { "text": "Leave the clearing", "value": "leave_clearing", "correct": true }
+              { "text": "Close the door, switch off the lights - nobody's at home.", "value": "close_the_door", "correct": false },
+              { "text": "Apologize profusely and promise to talk with your dog.", "value": "apologize_wrong", "correct": false },
+              { "text": "Apologize and offer medical help and pay for the pants.", "value": "apologize_correct", "correct": true }
             ]
           }
         ]

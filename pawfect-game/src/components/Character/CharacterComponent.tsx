@@ -3,7 +3,7 @@ import './CharacterComponent.css';
 
 function CharacterComponent(props: CharacterProps) {
     return (
-        <img className="character" src={props.sprite} alt={props.name} style={{ position: 'absolute', ...props.position }} />
+        <img className="character" src={props.sprite} alt={props.name} style={{ transform: props.transform ,position: 'absolute', ...props.position }} />
     );
 }
 

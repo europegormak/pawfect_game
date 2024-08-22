@@ -27,7 +27,7 @@
             "type": "story",
             "question": "Anna becomes anxious. What should Anna do?",
             "choices": [
-              { "text": "Ask for advice in the Dog Friends Facebook Forum.", "value": "ask_for_advice", "correct": false },
+              { "text": "Ask for advice in the Dog Friends Forum.", "value": "ask_for_advice", "correct": false },
               { "text": "Find a vet and book an appointment.", "value": "find_a_vet", "correct": true },
               { "text": "Make him some chicken soup.", "value": "chicken_soup", "correct": false }
             ]
@@ -36,23 +36,31 @@
       },
       {
         "id": 3,
-        "background": "/assets/images/3_full.jpg",
+        "background": "/assets/images/3_full.png",
         "characters": [
         ],
+        "dialogue": [
+          { "text": "Anna and Cooper are on their everyday walk. Anna is on a phone call, and Cooper is sniffing flowers.", "type": "story" }
+        ]
+      },
+      {
+        "id": 4,
+        "background": "/assets/images/4_full.jpg",
+        "characters": [],
         "dialogue": [
           { "text": "Cooper starts crunching some suspicious object. ", "type": "story" }
         ]
       },
       {
-        "id": 4,
-        "background": "/assets/images/4_full.png",
+        "id": 5,
+        "background": "/assets/images/5_full.png",
         "characters": [
-          { "name": "Cooper", "sprite": "/assets/images/4_cooper.png", "transform": "scaleX(-1)", "position": { "bottom": "5%","left": "10%" } },
-          { "name": "Anna", "sprite": "/assets/images/4_anna.png", "position": { "bottom": "10%","right": "10%" } }
+          { "name": "Cooper", "sprite": "/assets/images/5_cooper.png", "transform": "scaleX(-1)", "position": { "bottom": "-5%","left": "0%" } },
+          { "name": "Anna", "sprite": "/assets/images/5_anna.png", "position": { "bottom": "0%","right": "0%" } }
         ],
         "dialogue": [
           { "speaker": "Anna", "text": "Cooper, spit that out!", "type": "dialogue" },
-          { "speaker": "Anna", "text": "It's tasty!", "type": "dialogue" },
+          { "speaker": "Cooper", "text": "It's tasty!", "type": "dialogue" },
           {
             "text": "Later, Cooper feels discomfort and has trouble with stomach.",
             "type": "story",
@@ -66,8 +74,8 @@
         ]
       },
       {
-        "id": 5,
-        "background": "/assets/images/5_full.png",
+        "id": 6,
+        "background": "/assets/images/6_full.png",
         "characters": [],
         "dialogue": [
           { "text": "Last night it was the full moon. The neighbours' dog has been barking all night. It has been a tough night, you know.", "type": "story" },
@@ -75,11 +83,11 @@
         ]
       },
       {
-        "id": 6,
-        "background": "/assets/images/6_full.png",
+        "id": 7,
+        "background": "/assets/images/7_full.png",
         "characters": [
-          { "name": "Cooper", "sprite": "/assets/images/6_cooper.png", "position": { "bottom":"5%", "left": "5%" } },
-          { "name": "Anna", "sprite": "/assets/images/6_anna.png", "position": { "bottom":"10%", "right": "5%" } }
+          { "name": "Cooper", "sprite": "/assets/images/7_cooper.png", "position": { "bottom":"0%", "left": "0%" } },
+          { "name": "Anna", "sprite": "/assets/images/7_anna.png", "position": { "bottom":"0%", "right": "0%" } }
         ],
         "dialogue": [
           { "speaker": "Cooper", "text": "Who is that mean person who won't let you sleep at such an early hour?", "type": "dialogue" },
@@ -100,19 +108,19 @@
         ]
       },
       {
-        "id": 7,
-        "background": "/assets/images/7_full.png",
+        "id": 8,
+        "background": "/assets/images/8_full.png",
         "characters": [],
         "dialogue": [
           { "text": "As usual, Anna and Cooper are enjoying a day in the park on Sundays. Cooper is full of energy playing with the ball.", "type": "story" }
         ]
       },
       {
-        "id": 8,
-        "background": "/assets/images/8_full.png",
+        "id": 9,
+        "background": "/assets/images/9_full.png",
         "characters": [
-          { "name": "Cooper", "sprite": "/assets/images/8_cooper.png", "position": { "left": "10%" } },
-          { "name": "Anna", "sprite": "/assets/images/8_anna.png", "position": { "right": "10%" } }
+          { "name": "Cooper", "sprite": "/assets/images/9_cooper.png", "position": { "bottom": "0%", "left": "0%" } },
+          { "name": "Anna", "sprite": "/assets/images/9_anna.png", "position": { "bottom": "0%", "right": "0%" } }
         ],
         "dialogue": [
           { "speaker": "Anna", "text": "Good boy, Cooper! Bring the ball back!", "type": "dialogue" },
@@ -133,8 +141,8 @@
         ]
       },
       {
-        "id": 9,
-        "background": "/assets/images/9_full.png",
+        "id": 10,
+        "background": "/assets/images/10_full.png",
         "characters": [],
         "dialogue": [
           { "text": "Congratulations! You’ve experienced Anna and Cooper’s happy and sad moments together! Cooper is doing well because Anna took care of her pet’s insurance.", "type": "story" }

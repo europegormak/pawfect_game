@@ -76,7 +76,7 @@
       },
       {
         "id": 6,
-        "background": "/assets/images/6_full.jpg",
+        "background": "/assets/images/6_full.png",
         "characters": [
           { "name": "Cooper", "sprite": "/assets/images/6_cooper.png", "position": { "left": "10%" } },
           { "name": "Anna", "sprite": "/assets/images/6_anna.png", "position": { "right": "10%" } }
@@ -101,7 +101,7 @@
       },
       {
         "id": 7,
-        "background": "/assets/images/7_full.jpg",
+        "background": "/assets/images/7_full.png",
         "characters": [],
         "dialogue": [
           { "text": "As usual, Anna and Cooper are enjoying a day in the park on Sundays. Cooper is full of energy playing with the ball.", "type": "story" }
@@ -109,7 +109,7 @@
       },
       {
         "id": 8,
-        "background": "/assets/images/8_full.jpg",
+        "background": "/assets/images/8_full.png",
         "characters": [
           { "name": "Cooper", "sprite": "/assets/images/8_cooper.png", "position": { "left": "10%" } },
           { "name": "Anna", "sprite": "/assets/images/8_anna.png", "position": { "right": "10%" } }
@@ -134,7 +134,7 @@
       },
       {
         "id": 9,
-        "background": "/assets/images/9_full.jpg",
+        "background": "/assets/images/9_full.png",
         "characters": [],
         "dialogue": [
           { "text": "Congratulations! You’ve experienced Anna and Cooper’s happy and sad moments together! Cooper is doing well because Anna took care of her pet’s insurance.", "type": "story" }

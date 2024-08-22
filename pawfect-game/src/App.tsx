@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import SceneComponent from './components/Scene/SceneComponent';
 import DialogueBoxComponent from './components/DialogueBox/DialogueBoxComponent';
 import ModalComponent from './components/Modal/ModalComponent';
@@ -17,7 +17,6 @@ function App() {
     const [modalOpen, setModalOpen] = useState<boolean>(false);
     const [modalMessage, setModalMessage] = useState<JSX.Element | null>(null);
     const [gameOver, setGameOver] = useState<boolean>(false);
-    const [isSuccessful, setSetSuccessful] = useState<boolean>(false);
 
     function convertDialogueType(dialogue: Dialogue): Dialogue {
         return {
@@ -53,7 +52,6 @@ function App() {
                 );
                 setModalOpen(true);
                 setGameOver(true);
-                setSetSuccessful(true);
             } else {
                 setScene(scene + 1);
                 setCurrentDialogue(0);
@@ -104,7 +102,6 @@ function App() {
                 )}
             </SceneComponent>
             <ModalComponent 
-                isSuccessful={isSuccessful} 
                 isOpen={modalOpen} 
                 message={modalMessage!} 
                 onClose={closeModal} 

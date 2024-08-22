@@ -1,4 +1,3 @@
-// ModalComponent.tsx
 import React from 'react';
 import { ModalProps } from '../../models/ModalProps';
 import './ModalComponent.css'
@@ -12,7 +11,7 @@ const ModalComponent: React.FC<ModalProps> = ({ isSuccessful, isOpen, message, o
             <div className="modal-content">
                 <button onClick={onClose} className="modal-close-button">Close</button>
                 <div className={`modal-body ${isSuccessful ? 'success' : 'failure'}`}>
-                    {message}  {/* Render the JSX content */}
+                    {message}
                 </div>
             </div>
         </div>
@@ -23,7 +22,7 @@ const ModalComponent: React.FC<ModalProps> = ({ isSuccessful, isOpen, message, o
                 <div className="modal-content">
                     <button onClick={onClose} className="modal-close-button">Close</button>
                     <div className={`modal-body ${isSuccessful ? 'success' : 'failure'}`}>
-                        {message}  {/* Render the JSX content */}
+                        {message}
                     </div>
                 </div>
             </div>

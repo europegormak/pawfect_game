@@ -63,7 +63,17 @@ function App() {
         if (correct) {
             handleNext();
         } else {
-            setModalMessage(<p>Incorrect choice! Please try again.</p>);
+            setModalMessage(
+                <div>
+                    <br />
+                    <img src={Logo} alt="Game Logo" style={{ width: '100px', marginBottom: '20px' }} />
+                    <p>Incorrect choice! Please try again.</p>
+                    <p>
+                        Check out some useful advice about petcare: <a href="/mock.html" target="_blank" rel="noopener noreferrer">If Petcare</a>
+                    </p>
+                </div>
+            );
+            //setModalMessage(<p>Incorrect choice! Please try again.</p>);
             setModalOpen(true);
         }
     }

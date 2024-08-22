@@ -47,8 +47,8 @@
         "id": 4,
         "background": "/assets/images/4_full.png",
         "characters": [
-          { "name": "Cooper", "sprite": "/assets/images/4_cooper.png", "position": { "left": "10%" } },
-          { "name": "Anna", "sprite": "/assets/images/4_anna.png", "position": { "right": "10%" } }
+          { "name": "Cooper", "sprite": "/assets/images/4_cooper.png", "transform": "scaleX(-1)", "position": { "bottom": "5%","left": "10%" } },
+          { "name": "Anna", "sprite": "/assets/images/4_anna.png", "position": { "bottom": "10%","right": "10%" } }
         ],
         "dialogue": [
           { "speaker": "Anna", "text": "Cooper, spit that out!", "type": "dialogue" },
@@ -78,8 +78,8 @@
         "id": 6,
         "background": "/assets/images/6_full.png",
         "characters": [
-          { "name": "Cooper", "sprite": "/assets/images/6_cooper.png", "position": { "left": "10%" } },
-          { "name": "Anna", "sprite": "/assets/images/6_anna.png", "position": { "right": "10%" } }
+          { "name": "Cooper", "sprite": "/assets/images/6_cooper.png", "position": { "bottom":"5%", "left": "5%" } },
+          { "name": "Anna", "sprite": "/assets/images/6_anna.png", "position": { "bottom":"10%", "right": "5%" } }
         ],
         "dialogue": [
           { "speaker": "Cooper", "text": "Who is that mean person who won't let you sleep at such an early hour?", "type": "dialogue" },

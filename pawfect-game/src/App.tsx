@@ -73,7 +73,6 @@ function App() {
                     </p>
                 </div>
             );
-            //setModalMessage(<p>Incorrect choice! Please try again.</p>);
             setModalOpen(true);
         }
     }

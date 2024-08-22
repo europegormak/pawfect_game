@@ -1,19 +1,34 @@
+// ModalComponent.tsx
+import React from 'react';
 import { ModalProps } from '../../models/ModalProps';
-import './ModalComponent.css';
+import './ModalComponent.css'
 
-function ModalComponent(props: ModalProps) {
-    if (!props.isOpen) {
-        return null;
-    }
-    
+const ModalComponent: React.FC<ModalProps> = ({ isSuccessful, isOpen, message, onClose }) => {
+    if (!isOpen) return null;
+
+    if (isSuccessful){
     return (
         <div className="modal-overlay">
             <div className="modal-content">
-                <p>{props.message}</p>
-                <button onClick={props.onClose}>Close</button>
+                <button onClick={onClose} className="modal-close-button">Close</button>
+                <div className={`modal-body ${isSuccessful ? 'success' : 'failure'}`}>
+                    {message}  {/* Render the JSX content */}
+                </div>
             </div>
         </div>
     );
-}
+    } else {
+        return (
+            <div className="modal-overlay">
+                <div className="modal-content">
+                    <button onClick={onClose} className="modal-close-button">Close</button>
+                    <div className={`modal-body ${isSuccessful ? 'success' : 'failure'}`}>
+                        {message}  {/* Render the JSX content */}
+                    </div>
+                </div>
+            </div>
+        );
+    }
+};
 
 export default ModalComponent;

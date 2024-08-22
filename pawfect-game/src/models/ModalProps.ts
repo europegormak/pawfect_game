@@ -1,5 +1,6 @@
 export interface ModalProps {
+    isSuccessful: boolean;
     isOpen: boolean;
-    message: string;
+    message: JSX.Element;
     onClose: () => void;
 }

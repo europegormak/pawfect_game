@@ -1,13 +1,22 @@
 {
     "scenes": [
       {
-        "background": "/assets/images/house.jfif",
+        "id": 1,
+        "background": "/assets/images/1_full.png",
+        "characters": [],
+        "dialogue": [
+          { "text": "Anna and her bestie Cooper! Anna got Cooper as a birthday present a couple of months ago. Since then, they have been inseparable friends.", "type": "story" }
+        ]
+      },
+      {
+        "id": 2,
+        "background": "/assets/images/2_full.png",
         "characters": [
-          { "name": "Cooper", "sprite": "/assets/images/cooper.png", "position": { "left": "0%", "bottom": "-5%" } },
-          { "name": "Anna", "sprite": "/assets/images/anna.png", "position": { "right": "0%", "bottom": "0%" } }
+          { "name": "Cooper", "sprite": "/assets/images/2_cooper.png", "position": { "left": "0%", "bottom": "-5%" } },
+          { "name": "Anna", "sprite": "/assets/images/2_anna.png", "position": { "right": "0%", "bottom": "0%" } }
         ],
         "dialogue": [
-          { "text": "Last night it was the full moon.", "type": "story" },
+          { "text": "Anna wakes up to a quiet morning and notices that her usually lively dog, Cooper, isn’t his energetic self.", "type": "story" },
           { "speaker": "Anna", "text": "Cooper, how do you feel?", "type": "dialogue" },
           { "speaker": "Cooper", "text": "Ohhh, if I could tell you how bad I feel...", "type": "dialogue" },
           { "text": "Anna tries to cheer him up with his favorite squeaky toy.", "type": "story" },
@@ -18,32 +27,68 @@
             "type": "story",
             "question": "Anna becomes anxious. What should Anna do?",
             "choices": [
-              { "text": "Ask for advice in the Dog Friends Facebook Forum.", "value": "close_the_door", "correct": false },
-              { "text": "Find a vet and book an appointment.", "value": "apologize_wrong", "correct": true },
-              { "text": "Make him some chicken soup.", "value": "apologize_correct", "correct": false }
+              { "text": "Ask for advice in the Dog Friends Facebook Forum.", "value": "ask_for_advice", "correct": false },
+              { "text": "Find a vet and book an appointment.", "value": "find_a_vet", "correct": true },
+              { "text": "Make him some chicken soup.", "value": "chicken_soup", "correct": false }
             ]
           }
         ]
       },
       {
         "id": 3,
-        "background": "/assets/images/house.jpg",
+        "background": "/assets/images/3_full.png",
         "characters": [
-          { "name": "Cooper", "sprite": "/assets/images/cooper.png", "position": { "left": "10%" } },
-          { "name": "Anna", "sprite": "/assets/images/anna.png", "position": { "right": "10%" } }
         ],
         "dialogue": [
+          { "text": "Cooper starts crunching some suspicious object. ", "type": "story" }
+        ]
+      },
+      {
+        "id": 4,
+        "background": "/assets/images/4_full.png",
+        "characters": [
+          { "name": "Cooper", "sprite": "/assets/images/4_cooper.png", "position": { "left": "10%" } },
+          { "name": "Anna", "sprite": "/assets/images/4_anna.png", "position": { "right": "10%" } }
+        ],
+        "dialogue": [
+          { "speaker": "Anna", "text": "Cooper, spit that out!", "type": "dialogue" },
+          { "speaker": "Anna", "text": "It's tasty!", "type": "dialogue" },
+          {
+            "text": "Later, Cooper feels discomfort and has trouble with stomach.",
+            "type": "story",
+            "question": "What should Anna do?",
+            "choices": [
+              { "text": "Ignore it, wait for now.", "value": "ignore", "correct": false },
+              { "text": "Take Cooper for a walk.", "value": "walk", "correct": false },
+              { "text": "Immediately take him to the vet.", "value": "take_to_vet", "correct": true }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "background": "/assets/images/5_full.png",
+        "characters": [],
+        "dialogue": [
           { "text": "Last night it was the full moon. The neighbours' dog has been barking all night. It has been a tough night, you know.", "type": "story" },
-          { "text": "In the early morning delivery man knocks the door. Cooper became angry because he was abruptly awakened from a deep sleep.", "type": "story" },
+          { "text": "In the early morning delivery man knocks the door. Cooper became angry because he was abruptly awakened from a deep sleep.", "type": "story" }
+        ]
+      },
+      {
+        "id": 6,
+        "background": "/assets/images/6_full.jpg",
+        "characters": [
+          { "name": "Cooper", "sprite": "/assets/images/6_cooper.png", "position": { "left": "10%" } },
+          { "name": "Anna", "sprite": "/assets/images/6_anna.png", "position": { "right": "10%" } }
+        ],
+        "dialogue": [
           { "speaker": "Cooper", "text": "Who is that mean person who won't let you sleep at such an early hour?", "type": "dialogue" },
           { "text": "Anna opens the door and says \"Good morning\" to delivery man.", "type": "story" },
           { "speaker": "Cooper", "text": "Good morning? Reallllllly?", "type": "dialogue" },
           { "text": "Next second Cooper is out of the door and bits delivery man into leg. Pants are damaged. Leg is in blood.", "type": "story" },
           { "speaker": "Anna", "text": "Cooper, where are your manners?", "type": "dialogue" },
           { "speaker": "Cooper", "text": "Pfff... I am going to sleep!!!", "type": "dialogue" },
-          { "text": "Next second Cooper is out of the door and bits delivery man into leg. Pants are damaged. Leg is in blood.", "type": "story" },
           {
-            "speaker": "Anna",
             "type": "story",
             "question": "What should Anna do?",
             "choices": [
@@ -52,6 +97,47 @@
               { "text": "Apologize and offer medical help and pay for the pants.", "value": "apologize_correct", "correct": true }
             ]
           }
+        ]
+      },
+      {
+        "id": 7,
+        "background": "/assets/images/7_full.jpg",
+        "characters": [],
+        "dialogue": [
+          { "text": "As usual, Anna and Cooper are enjoying a day in the park on Sundays. Cooper is full of energy playing with the ball.", "type": "story" }
+        ]
+      },
+      {
+        "id": 8,
+        "background": "/assets/images/8_full.jpg",
+        "characters": [
+          { "name": "Cooper", "sprite": "/assets/images/8_cooper.png", "position": { "left": "10%" } },
+          { "name": "Anna", "sprite": "/assets/images/8_anna.png", "position": { "right": "10%" } }
+        ],
+        "dialogue": [
+          { "speaker": "Anna", "text": "Good boy, Cooper! Bring the ball back!", "type": "dialogue" },
+          { "text": "Cooper runs at incredible speed. Sharp turns, and he bumps into a park bench.", "type": "story" },
+          { "speaker": "Anna", "text": "Oh no, Cooper! Are you okay?", "type": "dialogue" },
+          { "text": "Cooper is limping. Anna is now crying.", "type": "story" },
+          { "speaker": "Cooper", "text": "Anna, don't worry, I promise I'll be more careful! One day...", "type": "dialogue" },
+          {
+            "text": "Anna picks up Cooper and heads towards home. ",
+            "type": "story",
+            "question": "What should Anna do now?",
+            "choices": [
+              { "text": "Buy another ball to make Cooper happier.", "value": "ball", "correct": false },
+              { "text": "Take a picture for social media and wait for advice.", "value": "picture", "correct": false },
+              { "text": "Observe the dog for a while and take him to the vet if needed.", "value": "observe", "correct": true }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "background": "/assets/images/9_full.jpg",
+        "characters": [],
+        "dialogue": [
+          { "text": "Outro text.", "type": "story" }
         ]
       }
     ]

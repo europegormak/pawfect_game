@@ -32,7 +32,7 @@ function App() {
     function handleNext() {
         const nextDialogue = currentDialogue + 1;
         
-        if (nextDialogue < scenes[scene].dialogue.length) {
+        if (nextDialogue < currentScene.dialogue.length) {
             setCurrentDialogue(nextDialogue);
         } else {
             if (scene === scenes.length - 1) {
@@ -73,7 +73,7 @@ function App() {
     
     return (
         <div>
-            <SceneComponent {...currentScene}>
+            <SceneComponent {...currentScene} currentDialogueType={currentDialogueData.type}>
                 {!gameOver && currentDialogueData.type === DialogueType.DIALOGUE && (
                     <DialogueBoxComponent
                         speaker={currentDialogueData.speaker}

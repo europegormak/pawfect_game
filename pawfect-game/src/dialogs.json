@@ -36,7 +36,7 @@
       },
       {
         "id": 3,
-        "background": "/assets/images/3_full.png",
+        "background": "/assets/images/3_full.jpg",
         "characters": [
         ],
         "dialogue": [
@@ -137,7 +137,7 @@
         "background": "/assets/images/9_full.jpg",
         "characters": [],
         "dialogue": [
-          { "text": "Outro text.", "type": "story" }
+          { "text": "Congratulations! You’ve experienced Anna and Cooper’s happy and sad moments together! Cooper is doing well because Anna took care of her pet’s insurance.", "type": "story" }
         ]
       }
     ]
